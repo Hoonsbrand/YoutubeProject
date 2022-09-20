@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "154AB443-9C80-48A7-A152-C9B1803386C4"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A446201-3788-46AA-8B8F-3DDD2D588529"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YoutubePlayer/Views/VideoPlayController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "playVideo()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5CCBACBD-0C21-4A75-806F-209B82BC1273"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YoutubePlayer/Controllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "500B5ABC-0288-4FEB-B8C5-D969ED69D242"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YoutubePlayer/Views/VideoPlayController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8EC96B7-1B8F-458C-903B-FB8DDA828EA6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YoutubePlayer/Views/VideoPlayController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "VideoPlayController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "D8EC96B7-1B8F-458C-903B-FB8DDA828EA6 - bb996e29575cfeba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YoutubePlayer.VideoPlayController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; YoutubePlayer.VideoPlayController"
+                  moduleName = "YoutubePlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoonsbrand/Documents/Hoonsbrand_Projects/YoutubePlayer/YoutubePlayer/Views/VideoPlayController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "D8EC96B7-1B8F-458C-903B-FB8DDA828EA6 - f17d4fe458c9f8aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YoutubePlayer.VideoPlayController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; YoutubePlayer.VideoPlayController"
+                  moduleName = "YoutubePlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoonsbrand/Documents/Hoonsbrand_Projects/YoutubePlayer/YoutubePlayer/Views/VideoPlayController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "D8EC96B7-1B8F-458C-903B-FB8DDA828EA6 - 117650188667408e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YoutubePlayer.VideoPlayController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;YoutubePlayer.VideoPlayController&gt;"
+                  moduleName = "YoutubePlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoonsbrand/Documents/Hoonsbrand_Projects/YoutubePlayer/YoutubePlayer/Views/VideoPlayController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "D8EC96B7-1B8F-458C-903B-FB8DDA828EA6 - 4973e31c9a524d72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YoutubePlayer.VideoPlayController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;YoutubePlayer.VideoPlayController&gt;"
+                  moduleName = "YoutubePlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoonsbrand/Documents/Hoonsbrand_Projects/YoutubePlayer/YoutubePlayer/Views/VideoPlayController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "D8EC96B7-1B8F-458C-903B-FB8DDA828EA6 - d9ad0751f7a90fc9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "YoutubePlayer.VideoPlayController.__deallocating_deinit"
+                  moduleName = "YoutubePlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hoonsbrand/Documents/Hoonsbrand_Projects/YoutubePlayer/YoutubePlayer/Views/VideoPlayController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
