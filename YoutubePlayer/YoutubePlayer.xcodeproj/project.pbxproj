@@ -17,6 +17,7 @@
 		72274F3C28D99B2200F68B8B /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72274F3A28D99B2200F68B8B /* VideoCell.swift */; };
 		72274F3D28D99B2200F68B8B /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72274F3B28D99B2200F68B8B /* VideoCell.xib */; };
 		72274F4128D9A33600F68B8B /* VideoPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72274F4028D9A33600F68B8B /* VideoPlayController.swift */; };
+		72C3468E28DABE4F00437AD8 /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C3468D28DABE4F00437AD8 /* VideoData.swift */; };
 		F260C521B8876CE0EAE87EDF /* Pods_YoutubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931FD4DDF71500E46E1CBB6F /* Pods_YoutubePlayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		72274F3A28D99B2200F68B8B /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		72274F3B28D99B2200F68B8B /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		72274F4028D9A33600F68B8B /* VideoPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayController.swift; sourceTree = "<group>"; };
+		72C3468D28DABE4F00437AD8 /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
 		931FD4DDF71500E46E1CBB6F /* Pods_YoutubePlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubePlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				72274F3628D98ED900F68B8B /* Video.swift */,
+				72C3468D28DABE4F00437AD8 /* VideoData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			files = (
 				72274F3C28D99B2200F68B8B /* VideoCell.swift in Sources */,
 				72274F2428D98DFD00F68B8B /* ViewController.swift in Sources */,
+				72C3468E28DABE4F00437AD8 /* VideoData.swift in Sources */,
 				72274F3728D98ED900F68B8B /* Video.swift in Sources */,
 				72274F4128D9A33600F68B8B /* VideoPlayController.swift in Sources */,
 				72274F2028D98DFD00F68B8B /* AppDelegate.swift in Sources */,

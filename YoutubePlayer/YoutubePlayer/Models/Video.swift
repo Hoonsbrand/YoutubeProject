@@ -8,6 +8,6 @@
 import Foundation
 
 struct Video {
-    var key: String = ""
-    var title: String = ""
+    var key: String
+    var title: String
 }
