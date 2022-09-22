@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import WebKit
 import YoutubePlayer_in_WKWebView
 
 class VideoPlayController: UIViewController {
