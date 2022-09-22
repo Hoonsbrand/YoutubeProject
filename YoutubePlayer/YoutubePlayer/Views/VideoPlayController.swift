@@ -7,30 +7,37 @@
 
 import UIKit
 import WebKit
+import YoutubePlayer_in_WKWebView
 
 class VideoPlayController: UIViewController {
 
-    @IBOutlet weak var videoWebView: WKWebView!
+
+    @IBOutlet weak var playerView: WKYTPlayerView!
     
-    var videoKey: String?
-    
+    private var videoKey: String?
+    private let playVarsDic = ["playsinline": 1]
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        DispatchQueue.main.async {
-            self.playVideo()
-        }
+        playerView.delegate = self
+        loadVideo()
         
     }
-
-    func playVideo() {
+    
+    // MARK: - 비디오 로드
+    func loadVideo() {
         guard let videoKey = self.videoKey else { return }
-        guard let url = URL(string: "https://www.youtube.com/embed/\(videoKey)") else { return }
-        videoWebView.load(URLRequest(url: url))
+        playerView.load(withVideoId: videoKey, playerVars: playVarsDic)
     }
     
+    // MARK: - 비디오 key 받아오기
     func getVideoKey(videoKey: String) {
         self.videoKey = videoKey
     }
-    
+}
+
+extension VideoPlayController: WKYTPlayerViewDelegate {
+    func playerViewDidBecomeReady(_ playerView: WKYTPlayerView) {
+        playerView.playVideo()
+    }
 }

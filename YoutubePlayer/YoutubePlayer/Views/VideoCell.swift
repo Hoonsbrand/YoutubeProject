@@ -11,7 +11,6 @@ class VideoCell: UICollectionViewCell {
 
     @IBOutlet weak var videoTitle: UILabel!
     @IBOutlet weak var videoImage: UIImageView!
-
     
     override func awakeFromNib() {
         super.awakeFromNib()
