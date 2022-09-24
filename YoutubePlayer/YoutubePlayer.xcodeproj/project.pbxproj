@@ -19,7 +19,6 @@
 		72274F4128D9A33600F68B8B /* VideoPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72274F4028D9A33600F68B8B /* VideoPlayController.swift */; };
 		72C3469628DC506800437AD8 /* YouTubeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C3469528DC506800437AD8 /* YouTubeData.swift */; };
 		72C3469728DC90C000437AD8 /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C3469328DC501200437AD8 /* VideoManager.swift */; };
-		72C3469928DC967900437AD8 /* Cosntants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C3469828DC967900437AD8 /* Cosntants.swift */; };
 		F260C521B8876CE0EAE87EDF /* Pods_YoutubePlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 931FD4DDF71500E46E1CBB6F /* Pods_YoutubePlayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,7 +39,6 @@
 		72274F4028D9A33600F68B8B /* VideoPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayController.swift; sourceTree = "<group>"; };
 		72C3469328DC501200437AD8 /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
 		72C3469528DC506800437AD8 /* YouTubeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YouTubeData.swift; sourceTree = "<group>"; };
-		72C3469828DC967900437AD8 /* Cosntants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cosntants.swift; sourceTree = "<group>"; };
 		931FD4DDF71500E46E1CBB6F /* Pods_YoutubePlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubePlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,7 +104,6 @@
 			children = (
 				72C3469328DC501200437AD8 /* VideoManager.swift */,
 				72C3469528DC506800437AD8 /* YouTubeData.swift */,
-				72C3469828DC967900437AD8 /* Cosntants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,7 +257,6 @@
 				72274F4128D9A33600F68B8B /* VideoPlayController.swift in Sources */,
 				72274F2028D98DFD00F68B8B /* AppDelegate.swift in Sources */,
 				72274F2228D98DFD00F68B8B /* SceneDelegate.swift in Sources */,
-				72C3469928DC967900437AD8 /* Cosntants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

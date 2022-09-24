@@ -11,6 +11,7 @@ class VideoManager {
     
     var videos = [Item]()
     
+    // https://www.googleapis.com/youtube/v3/videos?part=statistics,snippet&chart=mostPopular&maxResults=25&regionCode=KR&key=
     func performRequest(completion: @escaping () -> ()) { 
         let url = URL(string: "https://www.googleapis.com/youtube/v3/videos?part=statistics,snippet&chart=mostPopular&maxResults=25&key=\(Bundle.main.YOUTUBE_API_KEY)")!
         

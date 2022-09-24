@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     private var selectedVideo: String?
     
     private let videoManager = VideoManager()
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         videoCollectionView.delegate = self
@@ -64,8 +64,16 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let videos = videoManager.videos
         let urlString = "https://img.youtube.com/vi/\(videos[indexPath.row].id)/0.jpg"
         let fileURL = URL(string: urlString)
+        
+        let viewCountString = videoManager.videos[indexPath.row].statistics.viewCount
+        let viewCount = numberFormatter(number: Int(viewCountString) ?? 0)
+        
+        let likeCountString = videoManager.videos[indexPath.row].statistics.likeCount
+        let likeCount = numberFormatter(number: Int(likeCountString) ?? 0)
+        
         cell.videoImage.kf.setImage(with: fileURL)
         cell.getTitle(title: videos[indexPath.row].snippet.title)
+        cell.statisticsLabel.text = "조회수: \(viewCount)회\n좋아요: \(likeCount)개"
         
         return cell
     }
@@ -104,4 +112,14 @@ extension ViewController {
             }, completion: nil)
           }
        }
+}
+
+// MARK: - 숫자 세자리수 단위 콤마
+extension ViewController {
+    func numberFormatter(number: Int) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        return numberFormatter.string(from: NSNumber(value: number))!
+    }
 }
