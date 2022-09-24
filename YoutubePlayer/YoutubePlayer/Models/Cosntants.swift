@@ -8,5 +8,5 @@
 import Foundation
 
 enum YouTubeKey {
-    static let youTubeKey = ""
+    static let youTubeKey = "put your key here."
 }
