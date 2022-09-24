@@ -34,6 +34,9 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+## APIKEY
+YouTubeInfo.plist
+
 ### Swift ###
 # Xcode
 #
