@@ -52,8 +52,8 @@ class ViewController: UIViewController {
 }
 
 
-// MARK: - UICollectionViewDelegate, UICollectionViewDataSource
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+// MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return videoManager.videos.count
     }
@@ -68,12 +68,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         let viewCountString = videoManager.videos[indexPath.row].statistics.viewCount
         let viewCount = numberFormatter(number: Int(viewCountString) ?? 0)
         
-        let likeCountString = videoManager.videos[indexPath.row].statistics.likeCount
-        let likeCount = numberFormatter(number: Int(likeCountString) ?? 0)
+        if let likeCountString = videoManager.videos[indexPath.row].statistics.likeCount {
+            let likeCount = numberFormatter(number: Int(likeCountString) ?? 0)
+            cell.statisticsLabel.text = "조회수: \(viewCount)회\n좋아요: \(likeCount)개"
+        }
         
         cell.videoImage.kf.setImage(with: fileURL)
         cell.getTitle(title: videos[indexPath.row].snippet.title)
-        cell.statisticsLabel.text = "조회수: \(viewCount)회\n좋아요: \(likeCount)개"
         
         return cell
     }
@@ -83,18 +84,28 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         performSegue(withIdentifier: "goToPlayVideo", sender: nil)
     }
     
-}
-
-// MARK: - 컬렉션 뷰 FlowLayout
-extension ViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let itemSpacing: CGFloat = 0
-        let width: CGFloat = (collectionView.bounds.width - itemSpacing) / 1
-        let height: CGFloat = width * 8/7
+        //        let itemSpacing: CGFloat = 0
+        //        let width: CGFloat = (collectionView.bounds.width - itemSpacing) / 1
+        //        let height: CGFloat = width * 8/7
+        //
+        //        return CGSize(width: width, height: height)
         
-        return CGSize(width: width, height: height)
+        let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        
+        let width = collectionView.frame.width
+        let height = collectionView.frame.height
+        let itemsPerRow: CGFloat = 1
+        let widthPadding = sectionInsets.left * (itemsPerRow + 1)
+        let itemsPerColumn: CGFloat = 1.5
+        let heightPadding = sectionInsets.top * (itemsPerColumn + 1)
+        let cellWidth = (width - widthPadding) / itemsPerRow
+        let cellHeight = (height - heightPadding) / itemsPerColumn
+        
+        return CGSize(width: cellWidth, height: cellHeight)
     }
 }
+
 
 // MARK: - 스크롤 하면 네비게이션 바 숨김
 extension ViewController {

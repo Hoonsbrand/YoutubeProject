@@ -14,8 +14,8 @@ struct PopularVideos: Codable {
 
 // MARK: - Item
 struct Item: Codable, Identifiable {
-    let snippet: Snippet
     let id: String
+    let snippet: Snippet
     let statistics: Statistics
 }
 
@@ -30,5 +30,7 @@ struct Snippet: Codable {
 
 // MARK: - Statistics
 struct Statistics: Codable {
-    let viewCount, likeCount, favoriteCount, commentCount: String
+    let viewCount, favoriteCount, commentCount: String
+    let likeCount: String?
 }
+
