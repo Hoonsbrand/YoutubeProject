@@ -63,7 +63,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoCell", for: indexPath) as! VideoCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CELL.VIDEO_CELL, for: indexPath) as! VideoCell
         
         let videos = videoManager.videos
         let urlString = "https://img.youtube.com/vi/\(videos[indexPath.row].id)/0.jpg"
@@ -85,7 +85,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedVideo = videoManager.videos[indexPath.row].id
-        performSegue(withIdentifier: "goToPlayVideo", sender: nil)
+        performSegue(withIdentifier: SEGUE.GO_TO_PLAY_VIDEO, sender: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
