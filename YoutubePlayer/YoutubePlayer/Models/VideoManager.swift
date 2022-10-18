@@ -11,15 +11,25 @@ class VideoManager {
     
     var videos = [Item]()
     
-    // https://www.googleapis.com/youtube/v3/videos?part=statistics,snippet&chart=mostPopular&maxResults=25&regionCode=KR&key=
-    func performRequest(completion: @escaping () -> ()) { 
-        let url = URL(string: "https://www.googleapis.com/youtube/v3/videos?part=statistics,snippet&chart=mostPopular&maxResults=25&regionCode=KR&key=\(Bundle.main.YOUTUBE_API_KEY)")!
+    func performRequest(completion: @escaping () -> ()) {
         
-        URLSession.shared.dataTask(with: url){ [weak self] (data, response, error) in
+        let pageToken = PageToken.shared
+        
+        var url: URL?
+        
+        // 다음 페이지 토큰이 없을 때 (맨 처음 페이지 로드할 때)
+        if pageToken.nextPageToken == nil {
+            url = URL(string: "https://www.googleapis.com/youtube/v3/videos?part=statistics,snippet&chart=mostPopular&maxResults=25&regionCode=KR&key=\(Bundle.main.YOUTUBE_API_KEY)")!
+        } else {
+            url = URL(string: "https://www.googleapis.com/youtube/v3/videos?part=statistics,snippet&chart=mostPopular&maxResults=25&regionCode=KR&pageToken=\(pageToken.nextPageToken!)&key=\(Bundle.main.YOUTUBE_API_KEY)")!
+        }
+        
+        URLSession.shared.dataTask(with: url!){ [weak self] (data, response, error) in
             guard let self = self else { return }
             
             do {
                 let videoList = try JSONDecoder().decode(PopularVideos.self, from: data!)
+                pageToken.getNextPageToken(videoList.nextPageToken)
                 self.videos = videoList.items
             }
             catch {
@@ -29,6 +39,7 @@ class VideoManager {
             DispatchQueue.main.async {
                 completion()
             }
+            
         }.resume()
     }
 }

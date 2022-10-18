@@ -10,6 +10,7 @@ import Foundation
 // MARK: - PopularVideos
 struct PopularVideos: Codable {
     let items : [Item]
+    let nextPageToken: String
 }
 
 // MARK: - Item
@@ -32,5 +33,16 @@ struct Snippet: Codable {
 struct Statistics: Codable {
     let viewCount, favoriteCount, commentCount: String
     let likeCount: String?
+}
+
+// MARK: - nextPageToken
+class PageToken {
+    static let shared = PageToken()
+    
+    var nextPageToken: String? 
+    
+    func getNextPageToken(_ nextPageToken: String) {
+        self.nextPageToken = nextPageToken
+    }
 }
 

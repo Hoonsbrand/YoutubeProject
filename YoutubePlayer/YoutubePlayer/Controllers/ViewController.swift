@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     private let videoManager = VideoManager()
     
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         videoCollectionView.delegate = self
@@ -26,6 +28,8 @@ class ViewController: UIViewController {
         videoManager.performRequest { 
             self.videoCollectionView.reloadData()
         }
+        
+        initRefresh()
     }
     
     // MARK: - Configure UI
@@ -85,11 +89,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //        let itemSpacing: CGFloat = 0
-        //        let width: CGFloat = (collectionView.bounds.width - itemSpacing) / 1
-        //        let height: CGFloat = width * 8/7
-        //
-        //        return CGSize(width: width, height: height)
         
         let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
@@ -106,6 +105,32 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
 }
 
+// MARK: - 최상단에서 뷰를 밑으로 땡겼을 때 새로고침
+extension ViewController {
+    func initRefresh() {
+        refreshControl.addTarget(self, action: #selector(refreshTable(refresh:)), for: .valueChanged)
+        
+        refreshControl.backgroundColor = .white
+        refreshControl.tintColor = .purple
+        refreshControl.attributedTitle = NSAttributedString(string: "당겨서 새로고침")
+        
+        videoCollectionView.refreshControl = refreshControl
+    }
+    
+    @objc func refreshTable(refresh: UIRefreshControl) {
+           print("새로고침 시작")
+           
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { [weak self] in
+            guard let self = self else { return }
+            
+            self.videoManager.performRequest {
+                   self.videoCollectionView.reloadData()
+               }
+               
+               refresh.endRefreshing()
+           }
+       }
+}
 
 // MARK: - 스크롤 하면 네비게이션 바 숨김
 extension ViewController {
